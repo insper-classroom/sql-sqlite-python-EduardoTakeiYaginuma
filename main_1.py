@@ -40,9 +40,9 @@ conn.commit()
 # conn.commit()
 
 
-cursor.execute("UPDATE Estudantes SET 'Ano de Ingresso' = ? WHERE ID = ?", (2020, 2))
-print(cursor.fetchall())
-conn.commit()
+# cursor.execute("UPDATE Estudantes SET 'Ano de Ingresso' = ? WHERE ID = ?", (2020, 2))
+# print(cursor.fetchall())
+# conn.commit()
 
 # cursor.execute("SELECT * FROM Estudantes WHERE [Ano de Ingresso] = 2020")
 # print(cursor.fetchall())
@@ -56,9 +56,9 @@ conn.commit()
 # # O método fetchall() recupera todos os registros resultantes da consulta.
 # print(cursor.fetchall())
 
-# cursor.execute("UPDATE Estudantes SET 'Ano de Ingresso' = ? WHERE Curso = ?", (2018, "Computação"))
-# print(cursor.fetchall())
-# conn.commit()
+cursor.execute("UPDATE Estudantes SET 'Ano de Ingresso' = ? WHERE Curso = ?", (2018, "Computação"))
+print(cursor.fetchall())
+conn.commit()
 
 cursor.execute("SELECT * FROM Estudantes")
 # O método fetchall() recupera todos os registros resultantes da consulta.
