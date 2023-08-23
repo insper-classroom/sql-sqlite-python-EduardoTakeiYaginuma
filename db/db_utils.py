@@ -13,18 +13,18 @@ def create_table(informacoes,nome_tabela, dados):
     conn.commit()
 
     cursor.execute(f"""
-CREATE TABLE IF NOT EXISTS {nome_tabela} (
+    CREATE TABLE IF NOT EXISTS {nome_tabela} (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     {informacoes[0]} TEXT NOT NULL,
     {informacoes[1]} TEXT NOT NULL,
     {informacoes[2]} INTEGER
-);
-""")
+    );
+    """)
 
     cursor.executemany(f"""
-INSERT INTO {nome_tabela} ({informacoes[0]}, {informacoes[1]}, {informacoes[2]})
-VALUES (?, ?, ?);
-""", dados)
+    INSERT INTO {nome_tabela} ({informacoes[0]}, {informacoes[1]}, {informacoes[2]})
+    VALUES (?, ?, ?);
+    """, dados)
 
     conn.commit()
     return conn,cursor

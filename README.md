@@ -149,7 +149,7 @@ Insira 5 registros de estudantes na tabela. Inclua os seguintes estudantes fict�
 - João Alves, Matemática, Ano de Ingresso: 2018
 - Maria Oliveira, Química, Ano de Ingresso: 2022
  
-**Selecione e mostre todos os registros da tabela no console.**
+- **Selecione e mostre todos os registros da tabela no console.**
 
 [(1, 'Ana Silva', 'Computação', 2019),
 (2, 'Pedro Mendes', 'Física', 2021),
@@ -159,10 +159,10 @@ Insira 5 registros de estudantes na tabela. Inclua os seguintes estudantes fict�
 
 - Filtre e mostre os estudantes que ingressaram entre 2019 e 2020 (inclusive) e exiba no console. Use o comando WHERE para realizar essa filtragem.
 
-cursor.execute("SELECT * FROM Estudantes WHERE [Ano de Ingresso] = 2019")
+cursor.execute("SELECT * FROM Estudantes WHERE [Ano de Ingresso] >= 2019 AND [Ano de Ingresso] <= 2020")
 print(cursor.fetchall())
 
-[(1, 'Ana Silva', 'Computação', 2019)]
+[(1, 'Ana Silva', 'Computação', 2019), (3, 'Carla Souza', 'Computação', 2020)]
 
 - Atualize o "Ano de Ingresso" de um estudante específico. Mostre por todos estudantes novamente.
 

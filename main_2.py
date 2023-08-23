@@ -28,7 +28,7 @@ conn, cursor = create_table(informacoes, nome_tabela, dados)
 **Selecione e mostre todos os registros da tabela no console.**
 """
 # Mostrar a tabela
-cursor.execute("SELECT * FROM Estudantes")
+cursor.execute(f"SELECT * FROM {nome_tabela}")
 print(cursor.fetchall())
 
 # --------------------------------------------------------------------------
@@ -37,7 +37,7 @@ print(cursor.fetchall())
 Use o comando WHERE para realizar essa filtragem.
 '''
 #Filtra usando select
-filtro = "Ano_de_Ingresso >= 2019"
+filtro = "Ano_de_Ingresso >= 2019 and Ano_de_Ingresso <= 2020"
 select(conn, cursor, filtro, nome_tabela)
 
 # ----------------------------------------------------------------------------
